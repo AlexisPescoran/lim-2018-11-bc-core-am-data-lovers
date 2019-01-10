@@ -19,7 +19,7 @@ const filtrarPropiedad = (data, tipo) => {
   return arrayFiltrar;
 };
 
-const ordenarPropiedad = (data) => {
+const ordenarPropiedad = (data, tipo) => {
   let arrayOrdenar = [];
   for (let i = 0 ; i < data.length ; i++) {
     arrayOrdenar.push({name: data[i].name, img: data[i].img});
@@ -33,7 +33,12 @@ const ordenarPropiedad = (data) => {
     }
     return 0;
   });
-  return arrayOrdenar;
+  if (tipo === 'Az'){
+    return arrayOrdenar;
+  }
+  if (tipo === 'Za'){
+    return arrayOrdenar.reverse();
+  }
 };
 
 const calcularPropiedad = (data, tipo) => {

@@ -1,7 +1,4 @@
 const containerList = document.getElementById('container-list');
-const btnFiltrar = document.getElementById('btn-filtrar');
-const btnOrdenar = document.getElementById('btn-ordenar');
-const btnCalcular = document.getElementById('btn-calcular');
 const tipoPokemon = document.getElementById('tipo-pokemon');
 const ordenPokemon = document.getElementById('orden-pokemon');
 const tipoHuevo = document.getElementById('tipo-huevo');
@@ -37,13 +34,8 @@ const filtrarTipo = () => {
 
 const ordenarPokemon = () => {
   document.getElementById('cantidad-huevos').innerHTML = '';
-  const arrayOrdenado = pokemon.ordenarPropiedad(arrayPokemon, tipoPokemon.value);
-  if (ordenPokemon.value === 'Az') {
-    crearPlantilla(arrayOrdenado);
-  }
-  if (ordenPokemon.value === 'Za') {
-    crearPlantilla(arrayOrdenado.reverse());
-  }
+  const arrayOrdenado = pokemon.ordenarPropiedad(arrayPokemon, ordenPokemon.value);
+  crearPlantilla(arrayOrdenado);
 };
 
 const calcularHuevo = () => {
@@ -51,7 +43,3 @@ const calcularHuevo = () => {
   const cantidadHuevo = pokemon.calcularPropiedad(arrayPokemon, tipoHuevo.value);
   document.getElementById('cantidad-huevos').innerHTML = `La cantidad de pokemon de ${tipoHuevo.value} es ${cantidadHuevo}`;
 };
-
-btnFiltrar.addEventListener('click', filtrarTipo);
-btnOrdenar.addEventListener('click', ordenarPokemon);
-btnCalcular.addEventListener('click', calcularHuevo);

@@ -15,7 +15,7 @@
         <p id="region-kanto">Conoce a los Pokemon de la Región Kanto</p>
         <hr>
         <div class="group">
-            <select class="select" id="tipo-pokemon">
+            <select class="select" id="tipo-pokemon" onchange = "filtrarTipo()">
                 <option value="Selected">Selecciona tipo pokemon</option>
                 <option value="Water">Agua</option>
                 <option value="Bug">Bicho</option>
@@ -33,23 +33,20 @@
                 <option value="Poison">Veneno</option>
                 <option value="Flying">Volador</option>
             </select>
-            <button type="button" class="button" id="btn-filtrar">OK</button>
         </div>
         <div class="group">
-            <select class="select" id="orden-pokemon">
+            <select class="select" id="orden-pokemon" onchange="ordenarPokemon()">
                 <option value="Az">de A a Z</option>
                 <option value="Za">de Z a A</option>
             </select>
-            <button type="button" class="button" id="btn-ordenar">Ver</button>
         </div>
         <div class="group">
-            <select class="select" id="tipo-huevo">
+            <select class="select" id="tipo-huevo" onchange="calcularHuevo()">
                 <option value="2 km">huevos de 2 km</option>
                 <option value="5 km">huevos de 5 km</option>
                 <option value="10 km">huevos de 10 km</option>
                 <option value="Not in Eggs">Sin huevo</option>
             </select>
-            <button type="button" class="button" id="btn-calcular">Calcular</button>
         </div>
         <hr>
         <p id="cantidad-huevos"></p>
