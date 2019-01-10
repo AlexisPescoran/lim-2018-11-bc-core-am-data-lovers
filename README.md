@@ -11,6 +11,7 @@
 
 ***
 
+
 ## Definición de producto
 Hemos construido una página web que sirva como herramienta para mejorar el  desempeño del jugador habitual de Pokémon GO quien vendría a ser nuestro usuario objetivo.
 
